@@ -3,17 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-white dark:bg-primary-black;
-  }
-
-  .input-search {
-    @apply bg-light-grey/40 border text-primary-black/80 dark:text-white/80 md:text-sm rounded-lg focus:ring-1 focus:ring-primary-purple block w-full pl-10 p-2.5 dark:border-lighter-dark-grey placeholder-primary-black/60 dark:placeholder-white/60 focus:outline-none focus:border-primary-purple focus:border-[1.5px] dark:focus:border-white;
-  }
-
-  .filter-input {
-    @apply bg-light-grey/40 border cursor-pointer text-primary-black/80 dark:text-white/80 md:text-sm rounded-lg focus:ring-2 focus:ring-primary-purple block w-full p-2.5 border-primary-black/60 dark:border-lighter-dark-grey placeholder-primary-black/60 dark:placeholder-white/60 focus:outline-none focus:border-primary-purple focus:border-[1.5px] dark:focus:border-white;
-  }
+  
   :root {
     --background: 0 0% 100%;
 
@@ -121,6 +111,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-marine-blue text-white;
   }
 }
