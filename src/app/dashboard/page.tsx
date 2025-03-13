@@ -44,7 +44,7 @@ const Dashboard = async () => {
 
                         <div>
                             <p className="font-verdana font-normal text-sm">{todayDate}</p>
-                            <p className="font-verdana font-bold text-base">Aujourd'hui</p>
+                            <p className="font-verdana font-bold text-base">Aujourd&apos;hui</p>
                         </div>
                     </div>
 
