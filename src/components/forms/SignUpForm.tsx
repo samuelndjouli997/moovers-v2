@@ -66,7 +66,7 @@ const SignUpForm = () => {
               router.refresh();
               router.push("/dashboard");
         } catch (error) {
-            toast.error("Une erreur est survenue.");
+            toast.error(`Une erreur est survenue., ${error}`);
         }
       };
 
@@ -110,7 +110,7 @@ const SignUpForm = () => {
             type='submit'
             disabled={isSubmitting}
         >
-            S'inscrire
+            S&apos;inscrire
         </Button>
 
     </form>

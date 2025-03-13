@@ -4,9 +4,7 @@ import React from 'react'
 import { Button } from '../ui/button';
 import { signOut } from 'next-auth/react';
 
-type Props = {}
-
-const DashboardContent = (props: Props) => {
+const DashboardContent = () => {
     const handleSignOut = async () => await signOut()
     
   return (
