@@ -6,7 +6,6 @@ import { z } from 'zod'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
-import { useRouter } from "next/navigation";
 import { toast } from 'react-hot-toast';
 import { signIn } from 'next-auth/react';
 import { Label } from '../ui/label';
@@ -22,7 +21,6 @@ const LoginFormSchema = z.object({
   type LoginFormInputs = z.infer<typeof LoginFormSchema>;
 
 const LoginForm = () => {
-    const router = useRouter();
     const [isLoading, setIsLoading] = useState(false);
     const [showLoadingScreen, setShowLoadingScreen] = useState(false);
 

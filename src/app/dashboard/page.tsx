@@ -8,6 +8,7 @@ import { ChevronRight } from 'lucide-react'
 import DashboardTitle from '@/components/dashboard/dashboard-title'
 import StepCounter from '@/components/dashboard/step-counter'
 import MobileNavbar from '@/components/mobile-navbar'
+import DashboardLikedContent from '@/components/dashboard/dashboard-liked-content'
 
 const Dashboard = async () => {
     const user = await getCurrentUser()
@@ -64,67 +65,7 @@ const Dashboard = async () => {
                 {/* Vous aimerez peut-être */}
                 <DashboardTitle title="Vous aimerez peut-être" />
 
-                <div className="grid grid-cols-2 gap-4">
-                    <div className="flex flex-col space-y-4 max-w-[189px] cursor-pointer">
-                        <img 
-                            className={`object-cover rounded-xl`}
-                            src="/moovers-img1.png" 
-                            alt="moovers podcast"
-                        />
-
-                        <p className="font-neulis text-fluo-green text-xl font-semibold">Les 1000 vies de Simone Veil
-                        </p>
-
-                        <p className="font-verdana text-[#F0F4EF] text-base font-medium">Nicolas Despres</p>
-                        
-                    </div>
-                    <div className="flex flex-col space-y-4 max-w-[189px] cursor-pointer">
-                        <img 
-                            className={`object-cover rounded-xl`}
-                            src="/moovers-img2.png" 
-                            alt="moovers podcast"
-                        />
-
-                        <p className="font-neulis text-fluo-green text-xl font-semibold">À l’écoute
-                        du swing
-                        </p>
-
-                        <p className="font-verdana text-[#F0F4EF] text-base font-medium">Romane Butler</p>
-                        
-                    </div> 
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                    <div className="flex flex-col space-y-4 max-w-[189px] cursor-pointer">
-                        <img 
-                            className={`object-cover rounded-xl`}
-                            width={189}
-                            height={189}
-                            src="/moovers-img3.png" 
-                            alt="moovers podcast"
-                        />
-
-                        <p className="font-neulis text-fluo-green text-xl font-semibold">Quand Paris joue le jeu
-                        </p>
-
-                        <p className="font-verdana text-[#F0F4EF] text-base font-medium">Michael Williams</p>
-                        
-                    </div>
-                    <div className="flex flex-col space-y-4 max-w-[189px] cursor-pointer">
-                        <img 
-                            className={`object-cover rounded-xl`}
-                            width={189}
-                            height={189}
-                            src="/moovers-img4.png" 
-                            alt="moovers podcast"
-                        />
-
-                        <p className="font-neulis text-fluo-green text-xl font-semibold">La maison aux secrets oubliés
-                        </p>
-
-                        <p className="font-verdana text-[#F0F4EF] text-base font-medium">Sacha De la Porte</p>
-                        
-                    </div> 
-                </div>
+                <DashboardLikedContent />
 
                 {/* Vos cat préférées */}
                 <DashboardTitle title="Vos catégories préférées" />
