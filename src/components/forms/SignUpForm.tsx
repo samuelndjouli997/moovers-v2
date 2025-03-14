@@ -63,8 +63,7 @@ const SignUpForm = () => {
                 return;
               }
         
-              router.refresh();
-              router.push("/dashboard");
+              router.push("/preferences");
         } catch (error) {
             toast.error(`Une erreur est survenue., ${error}`);
         }

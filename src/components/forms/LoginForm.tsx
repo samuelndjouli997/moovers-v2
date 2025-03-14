@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { z } from 'zod'
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -12,6 +12,7 @@ import { signIn } from 'next-auth/react';
 import { Label } from '../ui/label';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import LoadingScreen from '../loading-screen';
 
 const LoginFormSchema = z.object({
     email: z.string().email("Email invalide"),
@@ -22,6 +23,8 @@ const LoginFormSchema = z.object({
 
 const LoginForm = () => {
     const router = useRouter();
+    const [isLoading, setIsLoading] = useState(false);
+    const [showLoadingScreen, setShowLoadingScreen] = useState(false);
 
     const {
         register,
@@ -38,22 +41,27 @@ const LoginForm = () => {
             email: data.email,
             password: data.password,
           });
-    
+
           if (result?.error) {
-            toast.error("Identifiants incorrects. Vérifiez vos informations.");
+            setIsLoading(false);
+            toast.error(result.error);
             return;
           }
     
           toast.success("Connexion réussie !");
-          router.refresh();
-          router.push("/dashboard");
+          // Afficher l'écran de chargement
+          setShowLoadingScreen(true);
         } catch (error) {
-          toast.error("Une erreur est survenue lors de la connexion.");
+          toast.error(`Une erreur est survenue lors de la connexion., ${error}`);
         }
       };
 
       
   return (
+    <>
+    {showLoadingScreen ? (
+        <LoadingScreen />
+      ) : (
     <form className="space-y-8 w-full" onSubmit={handleSubmit(onSubmit)}>
         <Label htmlFor="email">Email</Label>
         <Input
@@ -85,7 +93,8 @@ const LoginForm = () => {
         >
         Se connecter
         </Button>
-    </form>
+    </form>)}
+    </>
   )
 }
 

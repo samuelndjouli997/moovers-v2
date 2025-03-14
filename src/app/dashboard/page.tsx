@@ -7,6 +7,7 @@ import { getFormattedDate } from '@/lib/utils'
 import { ChevronRight } from 'lucide-react'
 import DashboardTitle from '@/components/dashboard/dashboard-title'
 import StepCounter from '@/components/dashboard/step-counter'
+import MobileNavbar from '@/components/mobile-navbar'
 
 const Dashboard = async () => {
     const user = await getCurrentUser()
@@ -16,6 +17,7 @@ const Dashboard = async () => {
     const todayDate = getFormattedDate();
 
   return (
+    <>
     <main>
         <Section className="py-[72px]">
             <div className="flex flex-col space-y-8">
@@ -190,6 +192,8 @@ const Dashboard = async () => {
             </div>
         </Section>
     </main>
+    <MobileNavbar />
+    </>
   )
 }
 

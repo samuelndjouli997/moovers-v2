@@ -2,7 +2,6 @@
 import { Metadata } from "next";
 import "./globals.css";
 import Providers from "./providers";
-import MobileNavbar from "@/components/mobile-navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +25,6 @@ export default function RootLayout({
       >
         <Providers>
           {children}
-          <MobileNavbar />
         </Providers>
       </body>
     </html>
