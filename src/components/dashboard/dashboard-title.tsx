@@ -7,8 +7,8 @@ type Props = {
 
 const DashboardTitle = ({title}: Props) => {
   return (
-    <div className="flex justify-between items-center text-2xl font-semibold w-full">
-        <h3>{title}</h3>
+    <div className="flex justify-between items-center font-neulis font-semibold w-full">
+        <h3 className="text-2xl">{title}</h3>
         <ChevronRight />
     </div>
     
