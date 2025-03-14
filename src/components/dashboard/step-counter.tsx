@@ -79,17 +79,21 @@ const StepCounter = () => {
           styles={buildStyles({
             rotation: 1 / 2 + 1 / 4, // Rotation pour n'afficher que le haut
             strokeLinecap: "round",
-            pathColor: "#4CAF50",
+            pathColor: "#25E38C",
             trailColor: "#374151",
             backgroundColor: "#0F1334",
           })}
         />
       </div>
 
-      {/* Texte centré sous la jauge */}
-      <div className="mt-4 flex gap-20 justify-between text-white">
-        <p className="text-sm">{steps} pas</p>
-        <p className="text-sm ml-5">{MAX_STEPS} pas</p>
+      {/* Ligne avec 0 pas - % - MAX_STEPS */}
+      <div className="mt-4 ml-8 flex justify-center items-center gap-[20px] w-full text-white">
+        <p className="text-sm">0 pas</p>
+        <div className="text-center">
+          <p className="text-4xl font-semibold">{progressPercentage.toFixed(1)}%</p>
+          <p className="text-2xl font-semibold text-wrap"><span className="text-fluo-green">{steps} {" "}<br /></span>pas validés</p>
+        </div>
+        <p className="text-sm">{MAX_STEPS} pas</p>
       </div>
 
       {!hasPermission && (
