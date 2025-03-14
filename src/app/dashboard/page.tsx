@@ -80,9 +80,9 @@ const Dashboard = async () => {
                                     backgroundSize: "200px",
                                     backgroundPosition: "top center",
                                 }} 
-                                className="h-[200px] lg:h-[320px] py-2 flex justify-end items-center"
+                                className="flex justify-center items-end h-[200px] lg:h-[320px] py-2"
                             >
-                                <p className="text-2xl font-semibold text-white">Comédie</p>
+                                <p className="text-2xl font-neulis font-semibold text-white">Comédie</p>
                             </Card>
                         </div>
                         <div className="grid grid-rows-2 gap-4">
@@ -94,9 +94,9 @@ const Dashboard = async () => {
                                     backgroundSize: "150px",
                                     backgroundPosition: "top center",
                                 }} 
-                                className="flex justify-start items-end pr-6"
+                                className="flex justify-end items-start pr-6"
                             >
-                                <p className="text-2xl font-semibold text-marine-blue">Action</p>
+                                <p className="text-2xl font-neulis font-semibold text-marine-blue">Action</p>
                             </Card>
                         
                             <Card
@@ -107,9 +107,9 @@ const Dashboard = async () => {
                                     backgroundSize: "150px",
                                     backgroundPosition: "top center",
                                 }} 
-                                className="flex justify-start items-end pr-6"
+                                className="flex justify-end items-start pr-6"
                             >
-                               <p className="text-2xl font-semibold text-marine-blue">Sport</p> 
+                               <p className="text-2xl font-neulis font-semibold text-marine-blue">Sport</p> 
                             </Card>    
                         </div>
                     </div>
@@ -122,8 +122,8 @@ const Dashboard = async () => {
                                 backgroundSize: "230px",
                                 backgroundPosition: "left -40px",
                             }}
-                            className="p-0 lg:py-24 h-[130px] lg:h-[280px] flex justify-end items-end">
-                            <p className="text-2xl font-semibold text-marine-blue pr-6">Horreur</p>
+                            className="p-0 lg:py-24 h-[130px] lg:h-[280px] flex justify-end items-center">
+                            <p className="text-2xl font-neulis font-semibold text-marine-blue pr-6">Horreur</p>
                         </Card>
                     </div>
                 </div>
