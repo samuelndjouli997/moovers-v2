@@ -8,7 +8,7 @@ const MobileNavbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-[#0F1334] shadow-md z-50">
+    <nav className="fixed lg:hidden bottom-0 left-0 w-full bg-[#0F1334] shadow-md z-50">
       <ul className="flex justify-around items-center p-4">
         {/* Accueil */}
         <li>
